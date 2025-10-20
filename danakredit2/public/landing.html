@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Datang di Dana Kredit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #a0e6ff, #98ff98);
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 700px; /* Diperbesar untuk menampung logo yang lebih besar */
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 550px; /* Diperbesar dari 400px */
+      height: auto;
+      animation: zoomInOut 3.5s ease-in-out forwards;
+      filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+    }
+
+    .welcome-text {
+      color: #004f6d;
+      font-size: 1.8rem; /* Diperbesar dari 1.5rem */
+      font-weight: 500;
+      margin-top: 30px; /* Diperbesar dari 25px */
+      opacity: 0;
+      animation: fadeInOut 2.5s ease-in-out forwards;
+      animation-delay: 1s;
+    }
+
+    .loader {
+      width: 50px; /* Diperbesar dari 40px */
+      height: 50px; /* Diperbesar dari 40px */
+      border: 6px solid rgba(255, 255, 255, 0.3); /* Diperbesar dari 5px */
+      border-top-color: #98ff98;
+      border-right-color: #a0e6ff;
+      border-radius: 50%;
+      margin-top: 30px; /* Diperbesar dari 25px */
+      opacity: 0;
+      animation: spin 1s linear infinite, fadeInOut 2.5s ease-in-out forwards;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes zoomInOut {
+      0% { 
+        transform: scale(0); 
+        opacity: 0; 
+      }
+      40% { 
+        transform: scale(1.15); /* Diperbesar dari 1.1 */
+        opacity: 1; 
+      }
+      70% { 
+        transform: scale(1); 
+        opacity: 1; 
+      }
+      100% { 
+        transform: scale(0); 
+        opacity: 0; 
+      }
+    }
+
+    @keyframes fadeInOut {
+      0% { 
+        opacity: 0; 
+      }
+      25% { 
+        opacity: 1; 
+      }
+      75% { 
+        opacity: 1; 
+      }
+      100% { 
+        opacity: 0; 
+      }
+    }
+
+    @keyframes spin {
+      to { 
+        transform: rotate(360deg); 
+      }
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .logo {
+        max-width: 450px; /* Diperbesar dari 300px */
+      }
+      
+      .welcome-text {
+        font-size: 1.6rem; /* Diperbesar dari 1.3rem */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        max-width: 380px; /* Diperbesar dari 250px */
+      }
+      
+      .welcome-text {
+        font-size: 1.4rem; /* Diperbesar dari 1.1rem */
+        margin-top: 25px; /* Diperbesar dari 20px */
+      }
+      
+      .loader {
+        width: 45px; /* Diperbesar dari 35px */
+        height: 45px; /* Diperbesar dari 35px */
+        margin-top: 25px; /* Diperbesar dari 20px */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://i.postimg.cc/RV3Gvfxm/5093-Photoroom.png" alt="Dana Kredit Logo" class="logo">
+    <h2 class="welcome-text">Selamat datang.</h2>
+    <div class="loader"></div>
+  </div>
+
+  <script>
+    // Setelah animasi selesai, redirect ke halaman dashboard
+    setTimeout(() => {
+      // Simulasi redirect ke dashboard
+      // Dalam implementasi nyata, ganti dengan URL dashboard yang sesuai
+      console.log("Redirecting to dashboard...");
+      
+      // Untuk demo, kita akan refresh halaman ini
+      // Dalam implementasi nyata, gunakan:
+      // window.location.href = "dashboard.html";
+      alert("Redirecting to dashboard... (Dalam implementasi nyata, halaman akan dialihkan ke dashboard)");
+    }, 4000);
+  </script>
+
+</body>
+</html>
